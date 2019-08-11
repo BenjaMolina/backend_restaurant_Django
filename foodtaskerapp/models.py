@@ -9,5 +9,6 @@ class Restaurant(models.Model):
     address = models.CharField(max_length=500)
     logo = models.ImageField(upload_to='restaurant_logo/', blank=False)
 
+    #Funciona para cuando se muestre en el Administrador de Django se muestre el nombre y no "Restaurant object"
     def __str__(self):
         return self.name
