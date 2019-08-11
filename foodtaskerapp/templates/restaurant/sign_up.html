@@ -12,7 +12,12 @@
 </head>
 
 <body>
-    <h1>Restaurante Sign Up</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ user_form }}
+        {{ restaurant_form }}
+        <button type="submit">Sign Up</button>
+    </form>
 
 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
